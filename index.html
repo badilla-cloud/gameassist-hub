@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GameAssist Hub: catálogo de videojuegos con una comunidad de ayuda por juego.">
+  <title>Inicio | GameAssist Hub</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor encabezado__barra">
+      <a class="logo" href="index.html">
+        <img src="img/logo.svg" alt="Logo de GameAssist Hub: un control de videojuego" width="30" height="30">
+        <span>GameAssist Hub</span>
+      </a>
+      <button class="nav__toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="menu-principal" aria-label="Menú principal">
+        <ul class="nav__lista">
+          <li><a class="nav__enlace" href="index.html">Inicio</a></li>
+          <li><a class="nav__enlace" href="catalogo.html">Catálogo</a></li>
+          <li><a class="nav__enlace" href="comunidad.html">Comunidad</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Sección visual principal (hero) -->
+    <section class="hero" aria-labelledby="titulo-hero">
+      <div class="contenedor hero__grid">
+        <div>
+          <span class="sobretitulo">Ayuda de jugadores para jugadores</span>
+          <h1 id="titulo-hero">Toda la ayuda de tu juego, <span class="texto-acento">en un solo lugar</span>.</h1>
+          <p class="hero__texto">
+            Elige un videojuego del catálogo y entra a su comunidad: reporta errores, comparte easter eggs
+            y resuelve tus dudas con otros jugadores del mismo título.
+          </p>
+          <div class="hero__acciones">
+            <a class="btn btn--primario btn--grande" href="catalogo.html">Explorar catálogo →</a>
+            <a class="btn btn--secundario btn--grande" href="#como-participar">¿Cómo participar?</a>
+          </div>
+        </div>
+
+        <!-- Contenido dinámico generado desde juegos.json -->
+        <div class="hero__visual" aria-labelledby="titulo-stats">
+          <h2 id="titulo-stats" class="visualmente-oculto">El hub en números</h2>
+          <div class="portadas" id="portadas-inicio"></div>
+          <div class="stats" id="stats-inicio">
+            <p class="cargando">Cargando datos…</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Presentación del problema -->
+    <section class="seccion seccion--borde" aria-labelledby="titulo-problema">
+      <div class="contenedor">
+        <div class="seccion__cabecera">
+          <span class="sobretitulo">El problema</span>
+          <h2 id="titulo-problema">La ayuda para cada juego está dispersa</h2>
+          <p class="seccion__intro">
+            Cuando un jugador se topa con un error, no encuentra un secreto o tiene una duda sobre un juego,
+            termina buscando en foros generales, videos y redes sociales. La información está repartida,
+            mezclada con otros títulos y muchas veces desactualizada o repetida.
+          </p>
+        </div>
+        <div class="grid-3">
+          <article class="info-card">
+            <span class="info-card__num">01</span>
+            <h3>Información dispersa</h3>
+            <p>Las respuestas están repartidas entre decenas de sitios, videos largos e hilos sin orden.</p>
+          </article>
+          <article class="info-card">
+            <span class="info-card__num">02</span>
+            <h3>Juegos mezclados</h3>
+            <p>En los foros generales las dudas de un juego se pierden entre publicaciones de muchos otros.</p>
+          </article>
+          <article class="info-card">
+            <span class="info-card__num">03</span>
+            <h3>Tiempo perdido</h3>
+            <p>Encontrar una solución sencilla puede tomar más tiempo que la partida misma.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Público objetivo -->
+    <section class="seccion seccion--borde" aria-labelledby="titulo-publico">
+      <div class="contenedor dos-columnas">
+        <div>
+          <span class="sobretitulo">Público objetivo</span>
+          <h2 id="titulo-publico">¿Para quién es GameAssist Hub?</h2>
+          <p class="seccion__intro">
+            Para <strong>jugadores casuales y entusiastas</strong> que quieren resolver un problema o descubrir
+            contenido oculto de un título específico, sin perder tiempo saltando entre sitios. Como cada juego
+            tiene su propio espacio, la ayuda que encuentran siempre es relevante para lo que están jugando.
+          </p>
+        </div>
+        <ul class="lista-check">
+          <li><span><strong>Jugadores atascados</strong> que necesitan saber cómo avanzar en una misión o vencer a un jefe.</span></li>
+          <li><span><strong>Jugadores con fallos técnicos</strong> que quieren saber si a otros les pasa lo mismo y cómo lo resolvieron.</span></li>
+          <li><span><strong>Exploradores y coleccionistas</strong> que buscan secretos, referencias y easter eggs.</span></li>
+          <li><span><strong>Jugadores con experiencia</strong> que quieren compartir lo que saben y ayudar a otros.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Propuesta de solución -->
+    <section class="seccion seccion--borde" aria-labelledby="titulo-solucion">
+      <div class="contenedor">
+        <div class="seccion__cabecera">
+          <span class="sobretitulo">La solución</span>
+          <h2 id="titulo-solucion">Una comunidad de ayuda por cada juego</h2>
+          <p class="seccion__intro">
+            GameAssist Hub organiza la ayuda por videojuego y por tipo de consulta, para que encuentres
+            rápido lo que buscas y puedas aportar lo que sabes.
+          </p>
+        </div>
+        <div class="grid-3">
+          <article class="info-card">
+            <h3>Catálogo con búsqueda</h3>
+            <p>Encuentra tu juego por nombre y fíltralo por género, plataforma o estado. Marca tus favoritos.</p>
+          </article>
+          <article class="info-card">
+            <h3>Comunidad por juego</h3>
+            <p>Publica errores, easter eggs y preguntas clasificadas, responde a otros y filtra por tipo.</p>
+          </article>
+          <article class="info-card">
+            <h3>Tus aportes se guardan</h3>
+            <p>Publicaciones, respuestas y favoritos se conservan en tu navegador aunque recargues la página.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cómo participar -->
+    <section class="seccion seccion--borde" id="como-participar" aria-labelledby="titulo-participar">
+      <div class="contenedor">
+        <div class="seccion__cabecera">
+          <span class="sobretitulo">Cómo comenzar</span>
+          <h2 id="titulo-participar">Tres pasos para recibir o dar ayuda</h2>
+        </div>
+        <ol class="pasos">
+          <li class="paso">
+            <h3>Busca tu juego</h3>
+            <p>En el catálogo escribe el nombre o usa los filtros de género, plataforma y estado.</p>
+          </li>
+          <li class="paso">
+            <h3>Entra a su comunidad</h3>
+            <p>Presiona “Entrar a la comunidad” para ver lo que otros jugadores han publicado.</p>
+          </li>
+          <li class="paso">
+            <h3>Publica o responde</h3>
+            <p>Comparte un error, un easter egg o una pregunta, y ayuda respondiendo a los demás.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Interacción inmediata: pestañas de tipos de publicación -->
+    <section class="seccion seccion--borde" aria-labelledby="titulo-tipos">
+      <div class="contenedor">
+        <div class="seccion__cabecera">
+          <span class="sobretitulo">Tipos de publicación</span>
+          <h2 id="titulo-tipos">¿Qué puedes publicar?</h2>
+          <p class="seccion__intro">Selecciona un tipo para ver cuándo usarlo.</p>
+        </div>
+        <div class="tabs">
+          <div class="tabs__lista" role="tablist" aria-label="Tipos de publicación">
+            <button class="tab" type="button" role="tab" id="tab-error" aria-selected="true" aria-controls="panel-tipo" data-tipo="error"><span class="punto"></span>Error</button>
+            <button class="tab" type="button" role="tab" id="tab-easter-egg" aria-selected="false" aria-controls="panel-tipo" data-tipo="easter-egg"><span class="punto"></span>Easter egg</button>
+            <button class="tab" type="button" role="tab" id="tab-pregunta" aria-selected="false" aria-controls="panel-tipo" data-tipo="pregunta"><span class="punto"></span>Pregunta</button>
+          </div>
+          <div class="tabs__panel" id="panel-tipo" role="tabpanel" aria-labelledby="tab-error"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contenido dinámico desde JSON: comunidades más activas -->
+    <section class="seccion seccion--borde" aria-labelledby="titulo-destacados">
+      <div class="contenedor">
+        <div class="fila-titulo">
+          <div class="seccion__cabecera">
+            <span class="sobretitulo">Destacados</span>
+            <h2 id="titulo-destacados">Comunidades más activas</h2>
+            <p class="seccion__intro">Los juegos con más publicaciones en este momento.</p>
+          </div>
+          <a class="btn btn--secundario" href="catalogo.html">Ver todo el catálogo →</a>
+        </div>
+        <div class="grid-juegos" id="destacados">
+          <p class="cargando">Cargando juegos…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Llamado a la acción final -->
+    <section class="seccion" aria-labelledby="titulo-cta">
+      <div class="contenedor">
+        <div class="cta">
+          <div>
+            <h2 id="titulo-cta">¿Atascado en un juego?</h2>
+            <p>Busca tu título en el catálogo y pregunta a su comunidad.</p>
+          </div>
+          <a class="btn btn--primario btn--grande" href="catalogo.html">Explorar catálogo →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie__grid">
+      <p>© <span id="anio-actual">2026</span> GameAssist Hub · ISW-521 Programación en Ambiente Web I · UTN</p>
+      <ul class="pie__enlaces">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="comunidad.html">Comunidad</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/comun.js"></script>
+  <script src="js/inicio.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Comunidad de ayuda por videojuego: errores, easter eggs y preguntas.">
+  <title>Comunidad | GameAssist Hub</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor encabezado__barra">
+      <a class="logo" href="index.html">
+        <img src="img/logo.svg" alt="Logo de GameAssist Hub: un control de videojuego" width="30" height="30">
+        <span>GameAssist Hub</span>
+      </a>
+      <button class="nav__toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="menu-principal" aria-label="Menú principal">
+        <ul class="nav__lista">
+          <li><a class="nav__enlace" href="index.html">Inicio</a></li>
+          <li><a class="nav__enlace" href="catalogo.html">Catálogo</a></li>
+          <li><a class="nav__enlace" href="comunidad.html">Comunidad</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="pagina-titulo" aria-labelledby="titulo-comunidad">
+      <div class="contenedor">
+        <ol class="migas" aria-label="Ruta">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li aria-current="page">Comunidad</li>
+        </ol>
+        <h1 id="titulo-comunidad">Comunidad</h1>
+        <p id="subtitulo-comunidad">Publica errores, easter eggs y preguntas, y responde a otros jugadores.</p>
+      </div>
+    </section>
+
+    <!-- Se muestra si todavía no se ha elegido un juego -->
+    <section class="seccion" id="sin-juego" hidden aria-labelledby="titulo-sin-juego">
+      <div class="contenedor">
+        <div class="panel sin-juego">
+          <span class="vacio__icono" aria-hidden="true">?</span>
+          <h2 id="titulo-sin-juego">Primero elige un juego</h2>
+          <p>Cada videojuego tiene su propia comunidad. Selecciónalo aquí o búscalo en el catálogo.</p>
+          <div class="cambiar-juego">
+            <div class="campo">
+              <label for="selector-inicial">Videojuego</label>
+              <select id="selector-inicial">
+                <option value="">Selecciona un juego</option>
+              </select>
+            </div>
+            <a class="btn btn--secundario" href="catalogo.html">Ir al catálogo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comunidad del juego elegido -->
+    <div id="zona-comunidad" hidden>
+      <section class="seccion" aria-labelledby="titulo-juego">
+        <div class="contenedor">
+          <article class="juego-detalle" id="detalle-juego"></article>
+          <div class="stats resumen" id="resumen" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="seccion seccion--borde" aria-label="Publicar y ver publicaciones">
+        <div class="contenedor comunidad-grid">
+
+          <!-- Formulario de publicación -->
+          <aside class="panel panel--pegajoso" aria-labelledby="titulo-form">
+            <h2 id="titulo-form" class="h3">Nueva publicación</h2>
+            <p class="nota-form">Los campos con <span class="requerido">*</span> son obligatorios.</p>
+
+            <form class="formulario" id="form-publicacion" novalidate>
+              <div class="campo">
+                <label for="campo-alias">Tu alias <span class="requerido">*</span></label>
+                <input type="text" id="campo-alias" name="alias" maxlength="20" placeholder="Ej.: LinkNovato" autocomplete="nickname" aria-describedby="error-alias">
+                <div class="campo__ayuda">
+                  <span class="campo__error" id="error-alias" aria-live="polite"></span>
+                  <span id="contador-alias">0/20</span>
+                </div>
+              </div>
+
+              <div class="campo">
+                <label for="campo-tipo">Tipo de publicación <span class="requerido">*</span></label>
+                <select id="campo-tipo" name="tipo" aria-describedby="error-tipo">
+                  <option value="">Elige un tipo</option>
+                  <option value="error">Error</option>
+                  <option value="easter-egg">Easter egg</option>
+                  <option value="pregunta">Pregunta</option>
+                </select>
+                <div class="campo__ayuda">
+                  <span class="campo__error" id="error-tipo" aria-live="polite"></span>
+                </div>
+              </div>
+
+              <div class="campo">
+                <label for="campo-titulo">Título <span class="requerido">*</span></label>
+                <input type="text" id="campo-titulo" name="titulo" maxlength="80" placeholder="Resume tu publicación en una línea" aria-describedby="error-titulo">
+                <div class="campo__ayuda">
+                  <span class="campo__error" id="error-titulo" aria-live="polite"></span>
+                  <span id="contador-titulo">0/80</span>
+                </div>
+              </div>
+
+              <div class="campo">
+                <label for="campo-descripcion">Descripción <span class="requerido">*</span></label>
+                <textarea id="campo-descripcion" name="descripcion" maxlength="500" placeholder="Explica el error, el secreto o tu duda con detalle" aria-describedby="error-descripcion"></textarea>
+                <div class="campo__ayuda">
+                  <span class="campo__error" id="error-descripcion" aria-live="polite"></span>
+                  <span id="contador-descripcion">0/500</span>
+                </div>
+              </div>
+
+              <p class="mensaje" id="mensaje-form" role="alert" hidden></p>
+
+              <div class="formulario__acciones">
+                <button class="btn btn--primario" type="submit">Publicar</button>
+                <button class="btn btn--secundario" type="button" id="btn-limpiar-form">Limpiar</button>
+              </div>
+            </form>
+          </aside>
+
+          <!-- Lista de publicaciones -->
+          <section aria-labelledby="titulo-lista">
+            <div class="lista-cabecera">
+              <h2 id="titulo-lista">Publicaciones</h2>
+              <button class="btn btn--peligro btn--chico" type="button" id="btn-borrar-mias">Borrar mis publicaciones</button>
+            </div>
+
+            <div class="lista-herramientas">
+              <div class="filtro-tipos" role="group" aria-label="Filtrar publicaciones por tipo">
+                <button class="filtro-tipo" type="button" data-filtro="todos" aria-pressed="true">Todos <span class="filtro-tipo__num" id="num-todos">0</span></button>
+                <button class="filtro-tipo" type="button" data-filtro="error" aria-pressed="false"><span class="punto"></span>Errores <span class="filtro-tipo__num" id="num-error">0</span></button>
+                <button class="filtro-tipo" type="button" data-filtro="easter-egg" aria-pressed="false"><span class="punto"></span>Easter eggs <span class="filtro-tipo__num" id="num-easter-egg">0</span></button>
+                <button class="filtro-tipo" type="button" data-filtro="pregunta" aria-pressed="false"><span class="punto"></span>Preguntas <span class="filtro-tipo__num" id="num-pregunta">0</span></button>
+              </div>
+              <div class="campo campo--busqueda">
+                <label for="buscar-post" class="visualmente-oculto">Buscar en las publicaciones</label>
+                <input type="search" id="buscar-post" placeholder="Buscar en publicaciones…" autocomplete="off">
+              </div>
+            </div>
+
+            <div class="publicaciones" id="lista-publicaciones" aria-live="polite"></div>
+          </section>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie__grid">
+      <p>© <span id="anio-actual">2026</span> GameAssist Hub · ISW-521 Programación en Ambiente Web I · UTN</p>
+      <ul class="pie__enlaces">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="comunidad.html">Comunidad</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/comun.js"></script>
+  <script src="js/comunidad.js"></script>
+</body>
+</html>

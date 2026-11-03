@@ -1,0 +1,309 @@
+[
+  {
+    "id": 1,
+    "nombre": "The Legend of Zelda: Breath of the Wild",
+    "genero": "Aventura",
+    "plataformas": [
+      "Nintendo Switch"
+    ],
+    "anio": 2017,
+    "desarrollador": "Nintendo",
+    "estado": "Completo",
+    "imagen": "img/portadas/zelda.jpg",
+    "imagenRespaldo": "img/zelda.svg",
+    "descripcion": "Aventura de mundo abierto en Hyrule. Explora libremente, resuelve santuarios y enfréntate a Ganon a tu propio ritmo.",
+    "publicaciones": [
+      {
+        "id": "s1-1",
+        "tipo": "pregunta",
+        "titulo": "¿Cómo consigo la paravela?",
+        "descripcion": "Ya salí de la cueva del inicio pero no sé cómo bajar de la meseta. ¿Qué tengo que hacer para obtener la paravela?",
+        "autor": "LinkNovato",
+        "fecha": "2026-09-14T18:20:00",
+        "resuelta": true,
+        "respuestas": [
+          {
+            "autor": "SheikahPro",
+            "texto": "Completa los cuatro santuarios de la Meseta de los Albores y habla con el anciano. Él te la entrega.",
+            "fecha": "2026-09-14T19:02:00"
+          }
+        ]
+      },
+      {
+        "id": "s1-2",
+        "tipo": "error",
+        "titulo": "El juego se queda en negro al cargar la partida",
+        "descripcion": "A veces, al cargar mi partida guardada, la pantalla se queda negra con música de fondo. ¿Le pasa a alguien más?",
+        "autor": "HyruleGamer",
+        "fecha": "2026-09-20T10:45:00",
+        "resuelta": false,
+        "respuestas": []
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "nombre": "Minecraft",
+    "genero": "Sandbox",
+    "plataformas": [
+      "PC",
+      "PlayStation",
+      "Xbox",
+      "Nintendo Switch",
+      "Móvil"
+    ],
+    "anio": 2011,
+    "desarrollador": "Mojang Studios",
+    "estado": "En actualizaciones",
+    "imagen": "img/portadas/minecraft.jpg",
+    "imagenRespaldo": "img/minecraft.svg",
+    "descripcion": "Construye, explora y sobrevive en un mundo hecho de bloques. Modo creativo, supervivencia y multijugador.",
+    "publicaciones": [
+      {
+        "id": "s2-1",
+        "tipo": "easter-egg",
+        "titulo": "Mobs al revés con la etiqueta \"Dinnerbone\"",
+        "descripcion": "Si le pones a cualquier mob una etiqueta de nombre que diga Dinnerbone o Grumm, aparece boca abajo. ¡Pruébenlo con una vaca!",
+        "autor": "BlockMaster",
+        "fecha": "2026-08-30T15:10:00",
+        "resuelta": false,
+        "respuestas": [
+          {
+            "autor": "CreeperFan",
+            "texto": "Y si nombras a una oveja jeb_ cambia de colores como un arcoíris.",
+            "fecha": "2026-08-30T16:40:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "nombre": "Hollow Knight",
+    "genero": "Metroidvania",
+    "plataformas": [
+      "PC",
+      "Nintendo Switch",
+      "PlayStation",
+      "Xbox"
+    ],
+    "anio": 2017,
+    "desarrollador": "Team Cherry",
+    "estado": "Completo",
+    "imagen": "img/portadas/hollow-knight.jpg",
+    "imagenRespaldo": "img/hollow-knight.svg",
+    "descripcion": "Explora el reino subterráneo de Hallownest, combate insectos corrompidos y descubre secretos ocultos en cada rincón.",
+    "publicaciones": [
+      {
+        "id": "s3-1",
+        "tipo": "pregunta",
+        "titulo": "¿Dónde está el doble salto?",
+        "descripcion": "Llevo horas explorando y hay plataformas a las que no llego. ¿Dónde se consigue el doble salto?",
+        "autor": "Hornet_99",
+        "fecha": "2026-09-02T21:00:00",
+        "resuelta": true,
+        "respuestas": [
+          {
+            "autor": "PaleKing",
+            "texto": "Son las Alas de Monarca. Están en la Cuenca Antigua, después de vencer al jefe Vasija Rota.",
+            "fecha": "2026-09-02T21:35:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "nombre": "Stardew Valley",
+    "genero": "Simulación",
+    "plataformas": [
+      "PC",
+      "Nintendo Switch",
+      "PlayStation",
+      "Xbox",
+      "Móvil"
+    ],
+    "anio": 2016,
+    "desarrollador": "ConcernedApe",
+    "estado": "En actualizaciones",
+    "imagen": "img/portadas/stardew-valley.jpg",
+    "imagenRespaldo": "img/stardew-valley.svg",
+    "descripcion": "Hereda una granja, cultiva, pesca, haz amigos en el pueblo y restaura el Centro Comunitario.",
+    "publicaciones": [
+      {
+        "id": "s4-1",
+        "tipo": "pregunta",
+        "titulo": "¿Cómo reparo el autobús al desierto?",
+        "descripcion": "Quiero ir al desierto de Calico, pero el autobús está averiado. ¿Qué necesito?",
+        "autor": "Granjera_CR",
+        "fecha": "2026-09-25T08:15:00",
+        "resuelta": true,
+        "respuestas": [
+          {
+            "autor": "PierreNoEs",
+            "texto": "Completa los lotes de la Bóveda en el Centro Comunitario (son lotes de oro). Al terminarlos se repara el autobús.",
+            "fecha": "2026-09-25T09:00:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "nombre": "Elden Ring",
+    "genero": "RPG",
+    "plataformas": [
+      "PC",
+      "PlayStation",
+      "Xbox"
+    ],
+    "anio": 2022,
+    "desarrollador": "FromSoftware",
+    "estado": "Completo",
+    "imagen": "img/portadas/elden-ring.jpg",
+    "imagenRespaldo": "img/elden-ring.svg",
+    "descripcion": "RPG de acción en las Tierras Intermedias. Combate exigente, mundo abierto y jefes memorables.",
+    "publicaciones": [
+      {
+        "id": "s5-1",
+        "tipo": "error",
+        "titulo": "Tirones (stuttering) en PC al explorar",
+        "descripcion": "El juego va bien en combate, pero al recorrer el mapa a caballo da tirones cada pocos segundos.",
+        "autor": "Sinluz",
+        "fecha": "2026-10-01T22:30:00",
+        "resuelta": false,
+        "respuestas": [
+          {
+            "autor": "Melina",
+            "texto": "A mí me ayudó actualizar los drivers de la tarjeta gráfica y verificar la integridad de los archivos en Steam.",
+            "fecha": "2026-10-02T07:50:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "nombre": "Hades",
+    "genero": "Roguelike",
+    "plataformas": [
+      "PC",
+      "Nintendo Switch",
+      "PlayStation",
+      "Xbox"
+    ],
+    "anio": 2020,
+    "desarrollador": "Supergiant Games",
+    "estado": "Completo",
+    "imagen": "img/portadas/hades.jpg",
+    "imagenRespaldo": "img/hades.svg",
+    "descripcion": "Escapa del inframundo como Zagreo. Cada intento es distinto gracias a las bendiciones de los dioses del Olimpo.",
+    "publicaciones": []
+  },
+  {
+    "id": 7,
+    "nombre": "Super Mario Odyssey",
+    "genero": "Plataformas",
+    "plataformas": [
+      "Nintendo Switch"
+    ],
+    "anio": 2017,
+    "desarrollador": "Nintendo",
+    "estado": "Completo",
+    "imagen": "img/portadas/mario-odyssey.jpg",
+    "imagenRespaldo": "img/mario-odyssey.svg",
+    "descripcion": "Viaja por distintos reinos junto a Cappy, captura enemigos y recolecta energilunas para rescatar a Peach.",
+    "publicaciones": []
+  },
+  {
+    "id": 8,
+    "nombre": "The Witcher 3: Wild Hunt",
+    "genero": "RPG",
+    "plataformas": [
+      "PC",
+      "PlayStation",
+      "Xbox",
+      "Nintendo Switch"
+    ],
+    "anio": 2015,
+    "desarrollador": "CD Projekt Red",
+    "estado": "Completo",
+    "imagen": "img/portadas/witcher-3.jpg",
+    "imagenRespaldo": "img/witcher-3.svg",
+    "descripcion": "Encarna a Geralt de Rivia, cazador de monstruos, en una historia de decisiones con consecuencias.",
+    "publicaciones": []
+  },
+  {
+    "id": 9,
+    "nombre": "Celeste",
+    "genero": "Plataformas",
+    "plataformas": [
+      "PC",
+      "Nintendo Switch",
+      "PlayStation",
+      "Xbox"
+    ],
+    "anio": 2018,
+    "desarrollador": "Maddy Makes Games",
+    "estado": "Completo",
+    "imagen": "img/portadas/celeste.jpg",
+    "imagenRespaldo": "img/celeste.svg",
+    "descripcion": "Ayuda a Madeline a escalar la montaña Celeste en un plataformero preciso y con una historia emotiva.",
+    "publicaciones": []
+  },
+  {
+    "id": 10,
+    "nombre": "Fortnite",
+    "genero": "Shooter",
+    "plataformas": [
+      "PC",
+      "PlayStation",
+      "Xbox",
+      "Nintendo Switch",
+      "Móvil"
+    ],
+    "anio": 2017,
+    "desarrollador": "Epic Games",
+    "estado": "En actualizaciones",
+    "imagen": "img/portadas/fortnite.jpg",
+    "imagenRespaldo": "img/fortnite.svg",
+    "descripcion": "Battle royale con construcción. Temporadas nuevas, eventos en vivo y modos creados por la comunidad.",
+    "publicaciones": []
+  },
+  {
+    "id": 11,
+    "nombre": "Among Us",
+    "genero": "Party",
+    "plataformas": [
+      "PC",
+      "Móvil",
+      "Nintendo Switch",
+      "PlayStation",
+      "Xbox"
+    ],
+    "anio": 2018,
+    "desarrollador": "Innersloth",
+    "estado": "En actualizaciones",
+    "imagen": "img/portadas/among-us.jpg",
+    "imagenRespaldo": "img/among-us.svg",
+    "descripcion": "Tripulantes contra impostores: completa tareas, descubre al traidor y vota en las reuniones de emergencia.",
+    "publicaciones": []
+  },
+  {
+    "id": 12,
+    "nombre": "Red Dead Redemption 2",
+    "genero": "Aventura",
+    "plataformas": [
+      "PC",
+      "PlayStation",
+      "Xbox"
+    ],
+    "anio": 2018,
+    "desarrollador": "Rockstar Games",
+    "estado": "Completo",
+    "imagen": "img/portadas/red-dead-2.jpg",
+    "imagenRespaldo": "img/red-dead-2.svg",
+    "descripcion": "Vive el ocaso del Lejano Oeste como Arthur Morgan, miembro de la banda de Van der Linde.",
+    "publicaciones": []
+  }
+]

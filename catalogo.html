@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo de videojuegos de GameAssist Hub con búsqueda, filtros y favoritos.">
+  <title>Catálogo | GameAssist Hub</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor encabezado__barra">
+      <a class="logo" href="index.html">
+        <img src="img/logo.svg" alt="Logo de GameAssist Hub: un control de videojuego" width="30" height="30">
+        <span>GameAssist Hub</span>
+      </a>
+      <button class="nav__toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="menu-principal" aria-label="Menú principal">
+        <ul class="nav__lista">
+          <li><a class="nav__enlace" href="index.html">Inicio</a></li>
+          <li><a class="nav__enlace" href="catalogo.html">Catálogo</a></li>
+          <li><a class="nav__enlace" href="comunidad.html">Comunidad</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="pagina-titulo" aria-labelledby="titulo-catalogo">
+      <div class="contenedor">
+        <ol class="migas" aria-label="Ruta">
+          <li><a href="index.html">Inicio</a></li>
+          <li aria-current="page">Catálogo</li>
+        </ol>
+        <h1 id="titulo-catalogo">Catálogo de videojuegos</h1>
+        <p>Busca tu juego, filtra por género, plataforma o estado, marca tus favoritos y entra a su comunidad para recibir o dar ayuda.</p>
+      </div>
+    </section>
+
+    <section class="seccion" aria-label="Búsqueda y resultados">
+      <div class="contenedor">
+        <form class="filtros" id="form-filtros" role="search" aria-label="Buscar y filtrar juegos">
+          <div class="campo campo--busqueda">
+            <label for="buscador">Buscar</label>
+            <input type="search" id="buscador" placeholder="Nombre o desarrollador…" autocomplete="off">
+          </div>
+          <div class="campo">
+            <label for="filtro-genero">Género</label>
+            <select id="filtro-genero">
+              <option value="">Todos</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="filtro-plataforma">Plataforma</label>
+            <select id="filtro-plataforma">
+              <option value="">Todas</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="filtro-estado">Estado</label>
+            <select id="filtro-estado">
+              <option value="">Todos</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="orden">Ordenar por</label>
+            <select id="orden">
+              <option value="nombre">Nombre (A-Z)</option>
+              <option value="recientes">Más recientes</option>
+              <option value="antiguos">Más antiguos</option>
+              <option value="activos">Más publicaciones</option>
+            </select>
+          </div>
+        </form>
+
+        <div class="filtros__extra">
+          <p class="resumen-catalogo" id="contador-resultados" aria-live="polite">Cargando catálogo…</p>
+          <div class="filtros__acciones">
+            <label class="interruptor" for="solo-favoritos">
+              <input type="checkbox" id="solo-favoritos" form="form-filtros">
+              <span class="interruptor__pista" aria-hidden="true"></span>
+              Solo favoritos <span id="num-favoritos" class="texto-suave">(0)</span>
+            </label>
+            <button class="btn btn--fantasma btn--chico" type="reset" form="form-filtros" id="btn-limpiar">Limpiar filtros</button>
+          </div>
+        </div>
+
+        <h2 class="visualmente-oculto">Resultados</h2>
+        <div class="grid-juegos" id="lista-juegos"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie__grid">
+      <p>© <span id="anio-actual">2026</span> GameAssist Hub · ISW-521 Programación en Ambiente Web I · UTN</p>
+      <ul class="pie__enlaces">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="comunidad.html">Comunidad</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/comun.js"></script>
+  <script src="js/catalogo.js"></script>
+</body>
+</html>
